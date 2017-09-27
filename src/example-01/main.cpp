@@ -47,6 +47,7 @@ int main(int argc, char** argv)
 
 	 //boost::thread* t = new boost::thread(boost::bind(&CScheduler::serviceQueue, s));
 	
+	 // group->interrupt_all();
 	 group->join_all();
 	 delete group;
 	 delete s; // Must be done after thread is interrupted/joined.
